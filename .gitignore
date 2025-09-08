@@ -1,0 +1,21 @@
+# 数据与模型
+dataset/
+*.pt
+
+# 中间结果/日志
+eval_tmp/
+*.log
+
+# 编译/构建产物
+h264_qpblock/build/
+h264_qpblock/eval_tmp/
+build/
+dist/
+
+# Python缓存
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 其他不需要
+cmake-*.tar.gz

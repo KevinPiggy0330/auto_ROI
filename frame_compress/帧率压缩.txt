@@ -1,0 +1,3 @@
+cd /mnt/c/Users/Neter/Desktop/Frame-Compress
+bash compress.sh test.mp4 output.mp4
+bash bandwidth.sh
