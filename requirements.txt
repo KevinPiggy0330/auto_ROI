@@ -1,7 +1,7 @@
-# 深度学习
-torch==2.4.1
-torchvision==0.19.1
-triton==3.0.0
+# --- 深度学习（由基础镜像自带，不再用 pip 安装） ---
+# torch==2.4.1
+# torchvision==0.19.1
+# triton==3.0.0   # 也不用单独装，随 torch 走
 
 # 检测 / YOLO
 ultralytics==8.3.159
@@ -10,7 +10,7 @@ thop==0.1.1-2209072238
 pycocotools==2.0.7
 
 # 科学计算
-numpy==1.24.4
+numpy==1.24.4          # 与 pandas 2.0.3、scipy 1.10.1 兼容
 scipy==1.10.1
 pandas==2.0.3
 sympy==1.13.3
@@ -18,16 +18,10 @@ sympy==1.13.3
 # 图像处理 / 可视化
 opencv-python==4.11.0.86
 pillow==10.4.0
-matplotlib==3.5.2
+matplotlib==3.8.4      # 换新稳定轮子，避免源码编译
 seaborn==0.13.2
 
-# 工具类
+# 工具
 tqdm==4.67.1
 pyyaml==6.0.2
 requests==2.32.4
-
-# 可选：训练日志
-# tensorboard==2.9.1
-# tensorboard-d
-
-
