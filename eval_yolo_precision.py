@@ -128,12 +128,12 @@ def compute_compression_metrics(orig_video: Path, roi_video: Path, gt_frames, pr
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", default="yolov5s.pt")
+    ap.add_argument("--model", default="./../weights/yolov5s.pt")
     ap.add_argument("--imgsz", type=int, default=640)
     ap.add_argument("--conf", type=float, default=0.25)
-    ap.add_argument("--gt_frames_dir", default="/root/dataset/frames", help="复用 detectAndConvert 抽出的原始帧目录")
-    ap.add_argument("--orig_video", default="/root/dataset/input.mp4")
-    ap.add_argument("--pred_video", default="/root/dataset/output_mux.mp4", help="ROI编码/抽帧后的mp4")
+    ap.add_argument("--gt_frames_dir", default="./../dataset/frames", help="复用 detectAndConvert 抽出的原始帧目录")
+    ap.add_argument("--orig_video", default="./../dataset/input.mp4")
+    ap.add_argument("--pred_video", default="./../dataset/output_mux.mp4", help="ROI编码/抽帧后的mp4")
     ap.add_argument("--work_dir", default="./eval_tmp")
     args = ap.parse_args()
 

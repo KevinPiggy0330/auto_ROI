@@ -17,7 +17,7 @@
     python detectAndConvert.py --labels_dir ./runs/detect/roi_results/labels
 
     参数说明：
-    --video         视频路径（默认 ./dataset/input.mp4）
+    --video         视频路径（默认 ./../dataset/input.mp4）
     --frames_dir    抽帧输出路径
     --yolo_repo     YOLOv5 路径
     --labels_dir    标签路径（不跑YOLO时使用）
@@ -123,16 +123,15 @@ def convert_and_split(label_dir, out_dir, img_w, img_h,
 
 
 # ---------- 主程序 ---------- #
-# ---------- 主程序 ---------- #
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="YOLO ROI 生成脚本")
-    parser.add_argument("--video", default="./dataset/input.mp4")
-    parser.add_argument("--frames_dir", default="./dataset/frames")
+    parser.add_argument("--video", default="./../dataset/input.mp4")
+    parser.add_argument("--frames_dir", default="./../dataset/frames")
     parser.add_argument("--labels_dir", default="./runs/detect/roi_results/labels",
                         help="已存在的label目录，若不跑YOLO则直接用此路径")
     parser.add_argument("--run_extract", action="store_true", help="执行抽帧")
     parser.add_argument("--run_detect", action="store_true", help="执行YOLO检测")
-    parser.add_argument("--weights", default="yolov8n.pt", help="YOLO权重文件")  # ← 新增
+    parser.add_argument("--weights", default="./../weights/yolov8n.pt", help="YOLO权重文件") 
     parser.add_argument("--roi_dir", default="./runs/roi_per_frame", help="ROI 输出目录")
     parser.add_argument("--merge_roi", action="store_true",
                         help="生成每帧合并 ROI 文件（默认不生成）")
